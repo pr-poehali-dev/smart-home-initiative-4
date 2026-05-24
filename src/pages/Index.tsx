@@ -159,18 +159,18 @@ export default function Index() {
           <div className="mx-auto max-w-4xl">
             <div className="text-center px-0 leading-5">
               <h1 className="mb-8 text-balance text-5xl tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
-                <span className="font-open-sans-custom not-italic">Идея.</span>{" "}
-                <span className="font-serif italic">Промпт.</span>{" "}
-                <span className="font-open-sans-custom not-italic">Результат.</span>
+                <span className="font-open-sans-custom not-italic">Учись.</span>{" "}
+                <span className="font-serif italic">Понимай.</span>{" "}
+                <span className="font-open-sans-custom not-italic">Развивайся.</span>
               </h1>
 
               <p className="mb-8 mx-auto max-w-2xl text-pretty leading-relaxed text-gray-300 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-thin font-open-sans-custom tracking-wide leading-7 text-xl">
-                дизайнер, разработчик или просто любопытный — возьми идею,{" "}
-                <span className="font-serif italic">опиши</span> её и наблюдай, как она оживает
+                школьник, студент или взрослый — просто задай вопрос,{" "}
+                <span className="font-serif italic">объясни</span> что непонятно, и AI-репетитор поможет разобраться
               </p>
 
               <div className="flex justify-center">
-                <ShinyButton className="px-8 py-3 text-base">начать</ShinyButton>
+                <ShinyButton className="px-8 py-3 text-base">попробовать бесплатно</ShinyButton>
               </div>
             </div>
           </div>
@@ -204,8 +204,7 @@ export default function Index() {
                 Тарифы и цены
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Выберите подходящий план. От индивидуальных авторов до корпоративных команд — гибкие
-                тарифы для вашего успеха.
+                Выберите подходящий план. От первого урока до глубокого погружения — тарифы для учеников любого уровня.
               </p>
             </div>
             <BentoPricing />
@@ -234,7 +233,7 @@ export default function Index() {
                 О нас
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Узнайте больше о нашей миссии, видении и ценностях, которые движут нами.
+                Узнайте больше о нашей миссии — сделать качественное образование доступным каждому.
               </p>
             </div>
             <AboutQuote />
@@ -258,13 +257,13 @@ export default function Index() {
 
           <div className="relative z-10 mx-auto w-full max-w-5xl mt-[5vh]">
             <ContactCard
-              title="Свяжитесь с нами"
-              description="Если у вас есть вопросы о наших услугах или нужна помощь, заполните форму. Мы стараемся отвечать в течение 1 рабочего дня."
+              title="Остались вопросы?"
+              description="Расскажите о вашей задаче — для какого предмета или цели нужен репетитор. Мы ответим в течение одного рабочего дня."
               contactInfo={[
                 {
                   icon: MailIcon,
                   label: "Почта",
-                  value: "hello@promptcraft.dev",
+                  value: "hello@edumind.ai",
                 },
                 {
                   icon: PhoneIcon,
