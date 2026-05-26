@@ -11,9 +11,11 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
+import { TutorChat } from "@/components/TutorChat"
 
 export default function Index() {
+  const [chatOpen, setChatOpen] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const pricingSectionRef = useRef<HTMLDivElement>(null)
   const aboutSectionRef = useRef<HTMLDivElement>(null)
@@ -145,6 +147,7 @@ export default function Index() {
   return (
     <main className="relative h-screen overflow-hidden">
       <LiquidMetalBackground />
+      <TutorChat open={chatOpen} onClose={() => setChatOpen(false)} />
 
       <div className="fixed inset-0 z-[5] bg-black/50" />
 
@@ -170,7 +173,7 @@ export default function Index() {
               </p>
 
               <div className="flex justify-center">
-                <ShinyButton className="px-8 py-3 text-base">попробовать бесплатно</ShinyButton>
+                <ShinyButton className="px-8 py-3 text-base" onClick={() => setChatOpen(true)}>попробовать бесплатно</ShinyButton>
               </div>
             </div>
           </div>
