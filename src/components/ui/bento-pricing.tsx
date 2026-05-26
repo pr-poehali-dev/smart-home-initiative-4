@@ -1,8 +1,10 @@
+import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Check, SparklesIcon } from "lucide-react"
 import DotPattern from "@/components/ui/dot-pattern"
+import { PaymentModal } from "@/components/PaymentModal"
 
 type PricingCardProps = {
   titleBadge: string
@@ -67,7 +69,11 @@ function PricingCard({
 }
 
 export function BentoPricing() {
+  const [paymentOpen, setPaymentOpen] = useState(false)
+
   return (
+    <>
+    <PaymentModal open={paymentOpen} onClose={() => setPaymentOpen(false)} />
     <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2 lg:grid-cols-8">
       <div
         className={cn(
@@ -100,7 +106,7 @@ export function BentoPricing() {
             <SparklesIcon className="me-1 size-3" /> Популярный
           </Badge>
           <div className="ml-auto">
-            <Button size="sm" className="bg-white text-black hover:bg-gray-100 font-open-sans-custom text-xs">
+            <Button size="sm" className="bg-white text-black hover:bg-gray-100 font-open-sans-custom text-xs" onClick={() => setPaymentOpen(true)}>
               Начать учиться
             </Button>
           </div>
@@ -177,5 +183,6 @@ export function BentoPricing() {
         cta="Связаться"
       />
     </div>
+    </>
   )
 }
